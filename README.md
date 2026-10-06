@@ -78,7 +78,11 @@ Los tres diagramas muestran el mismo fenómeno óptico desde diferentes formatos
 ├── README.md
 ├── diagrama.svg
 ├── diagrama.mmd
-└── diagrama.excalidraw
+├── diagrama.excalidraw
+├── video/
+│   ├── src/                 # Composición vertical de Remotion
+│   └── public/voz.ogg       # Narración original
+└── docs/
 ```
 
 ## Cómo visualizar los diagramas
@@ -98,6 +102,19 @@ El archivo `diagrama.mmd` contiene el código del diagrama. Puede visualizarse e
 ### Excalidraw
 
 Abre `diagrama.excalidraw` en [Excalidraw](https://excalidraw.com/) para visualizarlo o modificarlo.
+
+## Video vertical
+
+El video explicativo se crea con Remotion en formato vertical 9:16, con la narración original y rótulos animados para acompañar la explicación. Para previsualizarlo o renderizar el MP4:
+
+```bash
+cd video
+npm install
+npm run preview
+npm run render
+```
+
+El archivo final se genera en `video/out/refraccion-roger-bacon.mp4`.
 
 ## Criterios de diseño
 
