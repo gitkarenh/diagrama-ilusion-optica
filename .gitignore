@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build and bundler caches
+.cache/
+.webpack/
+**/.cache/webpack/
+
+# Generated video renders
+video/out/
+
+# Logs and local environment files
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.env
+.env.*
+!.env.example
