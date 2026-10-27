@@ -75,8 +75,8 @@ const RefractionDiagram: React.FC<{ frame: number }> = ({ frame }) => {
   const outgoingLength = 425;
   const photonIn = clampFade(frame, 35, 165);
   const photonOut = clampFade(frame, 250, 425);
-  const photonX = 125 + (450 - 125) * photonIn;
-  const photonY = 95 + (422 - 95) * photonIn;
+  const photonX = 110 + (450 - 110) * photonIn;
+  const photonY = 220 + (422 - 220) * photonIn;
   const waterPhotonX = 450 + (590 - 450) * photonOut;
   const waterPhotonY = 422 + (825 - 422) * photonOut;
   const ripplePhase = frame / 14;
@@ -124,20 +124,8 @@ const RefractionDiagram: React.FC<{ frame: number }> = ({ frame }) => {
         filter="url(#neon-glow)"
       />
       <line
-        x1="450"
-        y1="115"
-        x2="450"
-        y2="865"
-        stroke={colors.terracotta}
-        strokeWidth="5"
-        strokeDasharray="12 17"
-        strokeLinecap="round"
-        opacity={normal}
-        filter="url(#neon-glow)"
-      />
-      <line
-        x1="125"
-        y1="95"
+        x1="110"
+        y1="220"
         x2="450"
         y2="422"
         stroke={colors.gold}
@@ -158,6 +146,17 @@ const RefractionDiagram: React.FC<{ frame: number }> = ({ frame }) => {
         strokeDashoffset={outgoingLength * (1 - refracted)}
         strokeLinecap="round"
         filter="url(#neon-glow)"
+      />
+      <line
+        x1="450"
+        y1="115"
+        x2="450"
+        y2="865"
+        stroke={colors.terracotta}
+        strokeWidth="7"
+        strokeDasharray="18 14"
+        strokeLinecap="round"
+        opacity={Math.max(0.3, normal)}
       />
       <circle
         cx={photonX}
@@ -278,7 +277,7 @@ const RefractionDiagram: React.FC<{ frame: number }> = ({ frame }) => {
       </text>
       <text
         x="84"
-        y="354"
+        y="375"
         fill={colors.cyan}
         fontFamily="Arial, sans-serif"
         fontSize="24"
@@ -316,18 +315,14 @@ const RefractionDiagram: React.FC<{ frame: number }> = ({ frame }) => {
         </tspan>
       </text>
       <text
-        x="450"
-        y="395"
-        textAnchor="middle"
+        x="570"
+        y="510"
         fill={colors.cyan}
         fontFamily="Arial, sans-serif"
         fontSize="20"
         fontWeight="900"
         opacity={refracted}
         paintOrder="stroke"
-        stroke={colors.panel}
-        strokeWidth="10"
-        strokeLinejoin="round"
       >
         CAMBIA DE MEDIO
       </text>
@@ -425,7 +420,7 @@ const Video: React.FC = () => {
       <div
         style={{
           width: "100%",
-          height: 1160,
+          height: 970,
           border: `3px solid ${colors.cyan}`,
           borderRadius: 42,
           overflow: "hidden",

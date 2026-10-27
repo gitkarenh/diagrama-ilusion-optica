@@ -103,9 +103,9 @@ El archivo `diagrama.mmd` contiene el código del diagrama. Puede visualizarse e
 
 Abre `diagrama.excalidraw` en [Excalidraw](https://excalidraw.com/) para visualizarlo o modificarlo.
 
-## Video vertical
+## Video horizontal
 
-El video explicativo se crea con Remotion en formato vertical 9:16, con la narración original y rótulos animados para acompañar la explicación. Para previsualizarlo o renderizar el MP4:
+El video explicativo se crea con Remotion en formato horizontal 16:9, con narración en español, una estética original de aventura voxel y una explicación ampliada con ejemplos de una caña, una piscina y un pez bajo el agua. Distingue los estudios históricos de Roger Bacon de la ley de Snell, formulada siglos después. Para previsualizarlo o renderizar el MP4:
 
 ```bash
 cd video
@@ -114,7 +114,7 @@ npm run preview
 npm run render
 ```
 
-El archivo final se genera en `video/out/refraccion-roger-bacon.mp4`.
+El archivo final se genera en `video/out/refraccion-roger-bacon.mp4`. El texto de la narración se conserva en `docs/guion.md`.
 
 ## Criterios de diseño
 
